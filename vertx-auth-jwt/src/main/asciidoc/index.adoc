@@ -240,7 +240,7 @@ a good practice `HS256` should be present:
 `RS512`:: RSASSA using SHA-512 hash algorithm
 `ES256`:: ECDSA using P-256 curve and SHA-256 hash algorithm
 `ES384`:: ECDSA using P-384 curve and SHA-384 hash algorithm
-`ES512`:: ECDSA using P-521 curve and SHA-512 hash algorithm
+`ES512`:: ECDSA using P-512 curve and SHA-512 hash algorithm
 ----
 
 When no keystore is provided the implementation falls back in unsecure mode and signatures will not be verified, this
@@ -266,7 +266,7 @@ keytool -genkey -keystore keystore.jceks -storetype jceks -storepass secret -key
 keytool -genkey -keystore keystore.jceks -storetype jceks -storepass secret -keyalg RSA -keysize 2048 -alias RS512 -keypass secret -sigalg SHA512withRSA -dname "CN=,OU=,O=,L=,ST=,C=" -validity 360
 keytool -genkeypair -keystore keystore.jceks -storetype jceks -storepass secret -keyalg EC -keysize 256 -alias ES256 -keypass secret -sigalg SHA256withECDSA -dname "CN=,OU=,O=,L=,ST=,C=" -validity 360
 keytool -genkeypair -keystore keystore.jceks -storetype jceks -storepass secret -keyalg EC -keysize 384 -alias ES384 -keypass secret -sigalg SHA384withECDSA -dname "CN=,OU=,O=,L=,ST=,C=" -validity 360
-keytool -genkeypair -keystore keystore.jceks -storetype jceks -storepass secret -keyalg EC -keysize 521 -alias ES512 -keypass secret -sigalg SHA512withECDSA -dname "CN=,OU=,O=,L=,ST=,C=" -validity 360
+keytool -genkeypair -keystore keystore.jceks -storetype jceks -storepass secret -keyalg EC -keysize 512 -alias ES512 -keypass secret -sigalg SHA512withECDSA -dname "CN=,OU=,O=,L=,ST=,C=" -validity 360
 ----
 
 For more information on keystores and how to use the `PKCS12` format (Default from Java >=9) please see the documentation
